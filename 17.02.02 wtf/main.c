@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include<time.h>
 
-int main(int argc, char *argv[])
+int main(int argc, char *argv[]) ////// CHANGES /////////
 {
 	FILE * wt;
 	wt = fopen("input.txt","w");
