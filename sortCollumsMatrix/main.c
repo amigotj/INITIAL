@@ -1,31 +1,47 @@
 #include <stdio.h>
 #include <math.h>
-#include <time.h>
+
+//	http://informatics.mccme.ru/mod/statements/view3.php?id=11404&chapterid=112387#1
 
 int main(int argc, char *argv[])
 {
 	int n,m,i,j;		// n - razmer massiva i - s4et4ik flag - flag
-	printf("Input number of massive = n =\n");
 
 //	scanf("%d",&n);
 //	scanf("%d",&m);
+	
+//	int A[n][m];
+
 	n = 4;
 	m = 5;
-	
-	int A[n][m];
+
 	int summ[m];
 	int index;
-	srand(time(NULL));
+	
+
+	
+	int A[][5]=	{21, 12, 23, 24, 55,
+				 26, 12, 28, 39, 43,
+				 11, 27, 21, 14, 39,
+				 16, 17, 18, 35, 20};	
+
+
+/*
+	int A[][5]=	{{21, 12, 23, 24, 55},
+					 {26, 12, 28, 39, 43},
+					 {11, 27, 21, 14, 39},
+					 {16, 17, 18, 35, 20}};	
+*/	
+/*
 	for (i=0; i<n; i++)
 	{
 		for (j=0; j<m; j++)
 		{
-			A[i][j] = (int) rand() % 50 - 0;	
-			printf(" %d",A[i][j]);	
+			scanf("%d",&A[i][j]); // = (int) rand() % 50 - 0;		
 		}
 		printf("\n");				
 	}
-
+*/
 
 	for (j=0; j<m; j++)
 	{
@@ -37,12 +53,6 @@ int main(int argc, char *argv[])
 	}
 
 
-	printf("\n");
-	for (j=0; j<m; j++)
-	{
-		printf(" %d",summ[j]);
-	}
-	printf("\n");
 
 	int k=0;
 	int j1;
@@ -64,37 +74,35 @@ int main(int argc, char *argv[])
 			}
 			
 		}
-
-		for (k = 0; k<n; k++)
+		if	(max_j!=j)
 		{
-			temp=A[k][j];
-			A[k][j]=A[k][max_j];
-			A[k][max_j]=temp;
-		}	
+			for (k = 0; k<n; k++)
+			{
+				temp=A[k][j];
+				A[k][j]=A[k][max_j];
+				A[k][max_j]=temp;
+			}	
 		
-		temp1=summ[j];
-		summ[j]=summ[max_j];
-		summ[max_j]=temp1;
+			temp1=summ[j];
+			summ[j]=summ[max_j];
+			summ[max_j]=temp1;
+	
+		}
 
 		
 	}
-	printf("\n");
+
 	for (i=0; i<n; i++)
 	{
 		for (j=0; j<m; j++)
 		{
-			printf(" %d",A[i][j]);	
+			printf("%d ",A[i][j]);	
 		}
 		printf("\n");				
 	}
-	printf("\n");
+
 	
-	printf("\n");
-	for (j=0; j<m; j++)
-	{
-		printf(" %d",summ[j]);
-	}
-	printf("\n");
+
 	 	
 	return 0;
 }
