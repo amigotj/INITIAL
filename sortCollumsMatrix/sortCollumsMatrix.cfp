@@ -1,7 +1,7 @@
 <Project version="3.0">
-<Name>09,10 STROKI</Name>
+<Name>sortCollumsMatrix</Name>
 <Type>CUI</Type>
-<TargetName>09,10 STROKI</TargetName>
+<TargetName>sortCollumsMatrix</TargetName>
 <TargetType>exe</TargetType>
 <Folder name="Source Files">
 	<File>main.c</File>
@@ -10,11 +10,11 @@
 </Folder>
 <Folder name="Other Files">
 </Folder>
-<Attribute topline="1" x="15" y="17">main.c</Attribute>
+<Attribute topline="1" x="22" y="19">main.c</Attribute>
 <FolderState>111</FolderState>
 <DefConfig>mingw5</DefConfig>
 <Builder name="mingw5" type="MinGW" version="1.0">
-	<TargetName>09,10 STROKI</TargetName>
+	<TargetName>sortCollumsMatrix</TargetName>
 	<TargetType>exe</TargetType>
 	<TargetDir>mingw5</TargetDir>
 	<InterimDir>mingw5</InterimDir>
